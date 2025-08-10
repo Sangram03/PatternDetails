@@ -5,13 +5,16 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] }) // ✅ You forgot to initialize Inter
 
 export const metadata: Metadata = {
   title: "PixelForge - AI-Powered Pattern Studio",
   description:
     "Create, customize, and export stunning visual patterns with our advanced AI-powered pattern studio. Professional-grade backgrounds for modern web design.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
+  icons: {
+    icon: "/favicon/favicon.ico", // ✅ Works if placed in public/favicon/
+  },
 }
 
 export default function RootLayout({
@@ -22,7 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <Toaster />
         </ThemeProvider>
