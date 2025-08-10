@@ -528,7 +528,7 @@ What type of project are you working on?`
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
-                  PixelForge
+                  PixelDetails
                 </span>
                 <div className="text-xs text-gray-500 dark:text-gray-400">Pattern Studio</div>
               </div>
