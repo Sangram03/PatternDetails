@@ -556,82 +556,90 @@ What type of project are you working on?`
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm py-20">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <div className="mb-8">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 shadow-lg">
-              ✨ AI-Powered Patterns
-            </Badge>
-            <Badge className="mb-4 ml-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600 shadow-lg">
-              🚀 CSS-Only Options
-            </Badge>
-            <Badge className="mb-4 ml-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600 shadow-lg">
-              🤖 Chat Support
-            </Badge>
+      <section className="relative bg-gradient-to-b from-white/70 to-gray-100/50 dark:from-gray-900/70 dark:to-gray-950/50 backdrop-blur-sm py-20">
+  <div className="max-w-6xl mx-auto text-center px-4">
+    {/* Feature Badges */}
+    <div className="flex flex-wrap justify-center gap-3 mb-8">
+      <Badge className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md">
+        🎨 Live Pattern Preview
+      </Badge>
+      <Badge className="bg-gradient-to-r from-teal-500 to-emerald-500 text-white shadow-md">
+        ⚡ Instant Export
+      </Badge>
+      <Badge className="bg-gradient-to-r from-rose-500 to-orange-500 text-white shadow-md">
+        💬 Guided Help
+      </Badge>
+    </div>
+
+    {/* Heading */}
+    <h1 className="text-5xl md:text-7xl font-extrabold mb-3">
+      <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-rose-500 dark:from-indigo-400 dark:via-purple-400 dark:to-rose-400 bg-clip-text text-transparent">
+        Design Beyond Limits
+      </span>
+    </h1>
+    <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
+      Build Dynamic Visual Patterns
+    </h2>
+
+    {/* Description */}
+    <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
+      Our pattern studio lets you generate, customize, and download stunning backgrounds in seconds. 
+      Choose from CSS-only builds, AI-enhanced designs, and fully responsive layouts—ready to drop into your project.
+    </p>
+
+    {/* Feature Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
+      {[
+        {
+          icon: <CheckCircle className="w-6 h-6 text-white" />,
+          title: "Pure CSS Patterns",
+          desc: "No JS required—lightweight and performance-friendly."
+        },
+        {
+          icon: <Bot className="w-6 h-6 text-white" />,
+          title: "AI Pattern Finder",
+          desc: "Get AI suggestions for color palettes and layouts."
+        },
+        {
+          icon: <Sparkles className="w-6 h-6 text-white" />,
+          title: "Custom Export",
+          desc: "Export to CSS, SVG, or PNG with one click."
+        }
+      ].map((card, idx) => (
+        <div
+          key={idx}
+          className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
+            {card.icon}
           </div>
-
-          <h1 className="text-6xl md:text-7xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 dark:from-purple-400 dark:via-pink-400 dark:to-orange-400 bg-clip-text text-transparent">
-              Forge Stunning
-            </span>
-          </h1>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-700 dark:text-gray-300 mb-8">Visual Patterns</h2>
-
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Create, customize, and export professional-grade background patterns with our advanced pattern studio.
-            Powered by AI suggestions, CSS-only options, and intelligent chat support.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <CheckCircle className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">CSS-Only Patterns</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">Pure CSS patterns with no JavaScript required</p>
-            </div>
-
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <Bot className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">AI Chat Assistant</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                Get help finding patterns and understanding CSS
-              </p>
-            </div>
-
-            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                <Wand2 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="font-bold text-gray-900 dark:text-white mb-2">Smart Recommendations</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">
-                AI-powered pattern suggestions for your projects
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <Flame className="w-5 h-5 mr-2" />
-              Start Creating
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 hover:bg-gray-50 dark:hover:bg-gray-800 bg-transparent"
-              onClick={() => setIsChatOpen(true)}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Get Help
-            </Button>
-          </div>
+          <h3 className="font-bold text-gray-900 dark:text-white mb-2">{card.title}</h3>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">{card.desc}</p>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Action Buttons */}
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <Button
+        size="lg"
+        className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+      >
+        <Flame className="w-5 h-5 mr-2" />
+        Start Designing
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-2 hover:bg-gray-50 dark:hover:bg-gray-800 bg-transparent"
+      >
+        <MessageCircle className="w-5 h-5 mr-2" />
+        Chat with Expert
+      </Button>
+    </div>
+  </div>
+</section>
+
 
       {/* Stats Section */}
       <section className="relative py-16">
